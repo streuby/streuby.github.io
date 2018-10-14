@@ -43,7 +43,7 @@ var submitRecommendation = function () {
 // that this will update EVEN IF you don't refresh the page. Magic.
 recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
-
+    var data1 = [];
     childSnapshot.forEach(item => {
         var temp = { title: item.val().title };
         data1.push(temp);
