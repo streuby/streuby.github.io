@@ -44,37 +44,48 @@ var submitRecommendation = function () {
 recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
     var count = 0;
+    for(var index = 0; index < sizeOf(childSnapshot); index++){
+        $('#myTableBody').append(
+            +'<tr id = "myRow'+count+'"></tr>');
     childSnapshot.forEach(item => {
         // var temp = item.val();
         //console.log(item.val());
         // data1.push(temp);
-        $('#myTableBody').append('<tr>'
-        +'<td id = "title'+count+'"></td>'
-        +'<td id = "presenter'+count+'"></td>'
-        +'<td id = "version'+count+'"></td>'
-        +'<td id = "link'+count+'"></td>'+'</tr>')
+        // $('#myTableBody').append('<tr>'
+        // +'<td id = "title'+count+'"></td>'
+        // +'<td id = "presenter'+count+'"></td>'
+        // +'<td id = "version'+count+'"></td>'
+        // +'<td id = "link'+count+'"></td>'+'</tr>')
 
         switch(item.key){
             case 'title':
+            $('#myRow'+count).append(
+            +'<td id = "title'+count+'"></td>');
             $("#title"+count).html(item.val());
             break;
 
             case 'presenter':
+            $('#myRow'+count).append(
+                +'<td id = "presenter'+count+'"></td>');
             $("#presenter"+count).html(item.val());
             break;e
 
             case 'version':
+            $('#myRow'+count).append(
+                +'<td id = "version'+count+'"></td>');
             $("#version"+count).html(item.val());
             break;
 
             case 'link':
+            $('#myRow'+count).append(
+                +'<td id = "link'+count+'"></td>');
             $("#link"+count).html(item.val());
             
         }
 
         count++;
         return false;
-    });
+    });}
     //console.log(data1[0]);
 
     // childSnapshot.forEach(function(data) {
