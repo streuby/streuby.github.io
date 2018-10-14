@@ -47,7 +47,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         // Get the recommendation data from the most recent snapshot of data
         // added to the recommendations list in Firebase
         
-        data.val().forEach(function(index){
+        for(var index in data.val()){
 
         $('#myTableBody').append('<tr>'
         +'<td>'+index.title+'</td>'
@@ -65,7 +65,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     
         // Make the link actually work and direct to the URL provided
         // $("#link").attr("href", recommendation.link)
-        });
+        };
     });
 });
   
