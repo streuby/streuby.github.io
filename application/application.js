@@ -25,12 +25,14 @@ var submitRecommendation = function () {
   // Get input values from each of the form elements
   var title = $("#talkTitle").val();
   var presenter = $("#talkPresenter").val();
+  var version = $("#talkVersion").val();
   var link = $("#talkLink").val();
 
   // Push a new recommendation to the database using those values
   recommendations.push({
     "title": title,
     "presenter": presenter,
+    "version": version,
     "link": link
   });
 };
@@ -47,6 +49,7 @@ recommendations.limitToLast(1).on('child_added', function(childSnapshot) {
     // Update the HTML to display the recommendation text
     $("#title").html(recommendation.title)
     $("#presenter").html(recommendation.presenter)
+    $("#version").html(recommendation.version)
     $("#link").html(recommendation.link)
   
     // Make the link actually work and direct to the URL provided
