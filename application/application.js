@@ -47,7 +47,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     childSnapshot.forEach(item => {
         var temp = { title: item.val().title };
         data1.push(temp);
-        console.log(data1);
+        console.log(temp);
         return false;
     });
     
