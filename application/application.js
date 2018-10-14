@@ -56,19 +56,19 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
 
         switch(item.key){
             case 'title':
-            $("#title").html(item.val());
+            $("#title"+count).html(item.val());
             break;
 
             case 'presenter':
-            $("#presenter").html(item.val());
+            $("#presenter"+count).html(item.val());
             break;e
 
             case 'version':
-            $("#version").html(item.val());
+            $("#version"+count).html(item.val());
             break;
 
             case 'link':
-            $("#link").html(item.val());
+            $("#link"+count).html(item.val());
             
         }
 
