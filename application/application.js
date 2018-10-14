@@ -44,7 +44,7 @@ var submitRecommendation = function () {
 recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
     var count = 0;
-    for(var index = 0; index < sizeOf(childSnapshot); index++){
+    for(var index = 0; index < childSnapshot.numChildren(); index++){
         $('#myTableBody').append(
             +'<tr id = "myRow'+count+'"></tr>');
     childSnapshot.forEach(item => {
