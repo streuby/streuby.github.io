@@ -42,19 +42,30 @@ var submitRecommendation = function () {
 // event is triggered on the recommendations Firebase reference, which means
 // that this will update EVEN IF you don't refresh the page. Magic.
 recommendations.limitToLast(3).on('child_added', function(childSnapshot) {
-    // Get the recommendation data from the most recent snapshot of data
-    // added to the recommendations list in Firebase
-    recommendation = childSnapshot.val();
-  
-    // Update the HTML to display the recommendation text
-    $("#title").html(recommendation.title)
-    $("#presenter").html(recommendation.presenter)
-    $("#version").html(recommendation.version)
-    $("#link").html(recommendation.link)
-  
-    // Make the link actually work and direct to the URL provided
-    $("#link").attr("href", recommendation.link)
-  });
+    //loop over childSnapshot
+    var count = 0;
+    childSnapshot.array.forEach(function(data) {
+        // Get the recommendation data from the most recent snapshot of data
+        // added to the recommendations list in Firebase
+        
+        recommendation = data.val();
+
+        $('#myTableBody').append('<tr>'
+        +'<td>'+recommendation.title+'</td>'
+        +'<td>'+recommendation.presenter+'</td>'
+        +'<td>'+recommendation.version+'</td>'
+        +'<td>'+recommendation.link+'</td>'+'</tr>')
+    
+        // Update the HTML to display the recommendation text
+        // $("#title").html(recommendation.title)
+        // $("#presenter").html(recommendation.presenter)
+        // $("#version").html(recommendation.version)
+        // $("#link").html(recommendation.link)
+    
+        // Make the link actually work and direct to the URL provided
+        // $("#link").attr("href", recommendation.link)
+    });
+});
   
 
 // When the window is fully loaded, call this function.
