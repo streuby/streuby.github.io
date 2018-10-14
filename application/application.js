@@ -2,20 +2,24 @@
 // by navigating to your project's console overview page
 // (https://console.firebase.google.com/project/your-project-id/overview)
 // and clicking "Add Firebase to your web app"
-var config = {
-    apiKey: "AIzaSyA1LXdNzOf_BV8f6ch5uKj4wrF2JfX5TlA",
-    authDomain: "okayiglobal.firebaseapp.com",
-    databaseURL: "https://okayiglobal.firebaseio.com",
-    projectId: "okayiglobal",
-    storageBucket: "okayiglobal.appspot.com",
-    messagingSenderId: "666295690108"
-};
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCxWD71QcSjSfytAgCB3BrskmeXm4X2BdI",
+    authDomain: "talks-you-should-watch-154bf.firebaseapp.com",
+    databaseURL: "https://talks-you-should-watch-154bf.firebaseio.com",
+    projectId: "talks-you-should-watch-154bf",
+    storageBucket: "talks-you-should-watch-154bf.appspot.com",
+    messagingSenderId: "114823341254"
+  };
+  firebase.initializeApp(config);
+
   
   // Initialize your Firebase app
   firebase.initializeApp(config);
   
   // Reference to the recommendations object in your Firebase database
-  var recommendations = firebase.database().ref("okayiMessage");
+  var recommendations = firebase.database().ref("recommendations");
   
   // Save a new recommendation to the database, using the input in the form
   var submitRecommendation = function () {
