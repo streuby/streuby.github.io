@@ -43,50 +43,11 @@ var submitRecommendation = function () {
 // that this will update EVEN IF you don't refresh the page. Magic.
 recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
-    var count = 0;
-    for(var index = 0; index < childSnapshot.numChildren(); index++){
-        $('#myTableBody').append(
-            +'<tr id = "myRow'+count+'"></tr>');
-    childSnapshot.forEach(item => {
-        // var temp = item.val();
-        //console.log(item.val());
-        // data1.push(temp);
-        // $('#myTableBody').append('<tr>'
-        // +'<td id = "title'+count+'"></td>'
-        // +'<td id = "presenter'+count+'"></td>'
-        // +'<td id = "version'+count+'"></td>'
-        // +'<td id = "link'+count+'"></td>'+'</tr>')
+    childSnapshot.forEach(function(child) {
+        
+        showItems(child.val(), child.key);
+    });
 
-        switch(item.key){
-            case 'title':
-            $('#myRow'+count).append(
-            +'<td id = "title'+count+'"></td>');
-            $("#title"+count).html(item.val());
-            break;
-
-            case 'presenter':
-            $('#myRow'+count).append(
-                +'<td id = "presenter'+count+'"></td>');
-            $("#presenter"+count).html(item.val());
-            break;e
-
-            case 'version':
-            $('#myRow'+count).append(
-                +'<td id = "version'+count+'"></td>');
-            $("#version"+count).html(item.val());
-            break;
-
-            case 'link':
-            $('#myRow'+count).append(
-                +'<td id = "link'+count+'"></td>');
-            $("#link"+count).html(item.val());
-            
-        }
-
-        count++;
-        return false;
-    });}
-    //console.log(data1[0]);
 
     // childSnapshot.forEach(function(data) {
     //     // Get the recommendation data from the most recent snapshot of data
@@ -127,3 +88,15 @@ $(window).load(function () {
   $("#recommendationForm").submit(submitRecommendation);
 
 });
+
+function showItems(data, key) {
+    var html = '';
+    html += '<tr>';
+    $.each(data, function(key, value) {
+        html += '<td>' + value + '</td>';
+    });
+    html += '<td class="text-right"><a href="/" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a> <a href="/" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Delete</a></td>';
+    html += '</tr>';
+
+    $('#myTableBody').append(html);
+}
