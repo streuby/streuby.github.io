@@ -43,13 +43,34 @@ var submitRecommendation = function () {
 // that this will update EVEN IF you don't refresh the page. Magic.
 recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
-    var data1 = [];
+    var count = 0;
     childSnapshot.forEach(item => {
         // var temp = item.val();
-        console.log(item['title']);
+        //console.log(item.val());
         // data1.push(temp);
-        // $('#myTableBody').append('<tr>'
-        // +'<td>'+temp+'</td>'+'</tr>')
+        $('#myTableBody').append('<tr>'
+        +'<td id = "title'+count+'"></td>'
+        +'<td id = "presenter'+count+'"></td>'
+        +'<td id = "version'+count+'"></td>'
+        +'<td id = "link'+count+'"></td>'+'</tr>')
+
+        switch(item.key){
+            case 'title':
+            $("#title").html(item.val());
+            break;
+
+            case 'presenter':
+            $("#presenter").html(item.val());
+            break;e
+
+            case 'version':
+            $("#version").html(item.val());
+            break;
+
+            case 'link':
+            $("#link").html(item.val());
+            
+        }
         return false;
     });
     //console.log(data1[0]);
