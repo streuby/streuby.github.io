@@ -51,7 +51,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         
         return false;
     });
-    console.log(data1[0]['title']);
+    console.log(data1[0]["title"]);
 
     // childSnapshot.forEach(function(data) {
     //     // Get the recommendation data from the most recent snapshot of data
