@@ -50,7 +50,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         for(var index in data.val()){
 
         $('#myTableBody').append('<tr>'
-        +'<td>'+data.val(index)+'</td>'
+        +'<td>'+data[index]+'</td>'
         +'<td>'+index.presenter+'</td>'
         +'<td>'+index.version+'</td>'
         +'<td>'+index.link+'</td>'+'</tr>')
