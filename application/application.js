@@ -28,6 +28,7 @@ var recommendations = myFirebase.child("recommendations");
 // unique ID automatically.
 recommendations.push({
     "title": "The danger of a single story",
+    "version": "v-1.5 May 2015",
     "presenter": "Chimamanda Ngozi Adichie",
     "link": "https://www.ted.com/talks/chimamanda_adichie_the_danger_of_a_single_story"
 });
