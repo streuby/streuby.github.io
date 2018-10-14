@@ -44,7 +44,7 @@ var submitRecommendation = function () {
 recommendations.limitToLast(3).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
     var count = 0;
-    childSnapshot.array.forEach(function(data) {
+    childSnapshot.forEach(function(data) {
         // Get the recommendation data from the most recent snapshot of data
         // added to the recommendations list in Firebase
         
