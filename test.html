@@ -111,42 +111,28 @@
       </p>
 
     </div>
-
-    
-
-    <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
-
-    <script>
-
+  
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+<script>
       // Initialize Firebase
-
-      var config = {
-
-        apiKey: "AIzaSyDlJzLRr2jkvvHk6ozOOW71OEcyODjf_ak",
-
-        authDomain: "cicnavi-github-io.firebaseapp.com",
-
-        databaseURL: "https://cicnavi-github-io.firebaseio.com",
-
-        projectId: "cicnavi-github-io",
-
-        storageBucket: "cicnavi-github-io.appspot.com",
-
-        messagingSenderId: "409780451977"
-
-      };
-
+        var config = {
+            apiKey: "AIzaSyA1LXdNzOf_BV8f6ch5uKj4wrF2JfX5TlA",
+            authDomain: "okayiglobal.firebaseapp.com",
+            databaseURL: "https://okayiglobal.firebaseio.com",
+            projectId: "okayiglobal",
+            storageBucket: "okayiglobal.appspot.com",
+            messagingSenderId: "666295690108"
+        };
         
+      //Firebase instance
 
-      // Firebase instance.
-
-      firebase.initializeApp(config);
+        firebase.initializeApp(config);
 
 
 
       // Database reference to the helloMessage key.
 
-      var helloMessageReference = firebase.database().ref('helloMessage');
+      var helloMessageReference = firebase.database().ref('okayiMessage');
 
 
 
