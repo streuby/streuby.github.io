@@ -12,40 +12,22 @@
     storageBucket: "talks-you-should-watch-154bf.appspot.com",
     messagingSenderId: "114823341254"
   };
-  firebase.initializeApp(config);
-
   
   // Initialize your Firebase app
-  firebase.initializeApp(config);
-  
-  // Reference to the recommendations object in your Firebase database
-  var recommendations = firebase.database().ref("recommendations");
-  
-  // Save a new recommendation to the database, using the input in the form
-  var submitRecommendation = function () {
-  
-    // Get input values from each of the form elements
-    var title = $("#talkTitle").val();
-    var presenter = $("#talkPresenter").val();
-    var link = $("#talkLink").val();
-  
-    // Push a new recommendation to the database using those values
-    recommendations.push({
-      "title": title,
-      "presenter": presenter,
-      "link": link
-    });
-  };
-  
-  // When the window is fully loaded, call this function.
-  // Note: because we are attaching an event listener to a particular HTML element
-  // in this function, we can't do that until the HTML element in question has
-  // been loaded. Otherwise, we're attaching our listener to nothing, and no code
-  // will run when the submit button is clicked.
-  $(window).load(function () {
-  
-    // Find the HTML element with the id recommendationForm, and when the submit
-    // event is triggered on that element, call submitRecommendation.
-    $("#recommendationForm").submit(submitRecommendation);
-  
-  });
+firebase.initializeApp(config);
+
+// Reference to your entire Firebase database
+var myFirebase = firebase.database().ref();
+
+// Get a reference to the recommendations object of your Firebase.
+// Note: this doesn't exist yet. But when we write to our Firebase using
+// this reference, it will create this object for us!
+var recommendations = myFirebase.child("recommendations");
+
+// Push our first recommendation to the end of the list and assign it a
+// unique ID automatically.
+recommendations.push({
+    "title": "The danger of a single story",
+    "presenter": "Chimamanda Ngozi Adichie",
+    "link": "https://www.ted.com/talks/chimamanda_adichie_the_danger_of_a_single_story"
+});
