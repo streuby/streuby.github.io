@@ -45,12 +45,12 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
     var data1 = [];
     childSnapshot.forEach(item => {
-        var temp = { title: item.val().title };
+        var temp = { title: item.val() };
         data1.push(temp);
-        console.log(temp);
+        
         return false;
     });
-    
+    console.log(data1);
 
     // childSnapshot.forEach(function(data) {
     //     // Get the recommendation data from the most recent snapshot of data
