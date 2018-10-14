@@ -50,7 +50,7 @@ recommendations.limitToLast(2).on('child_added', function(childSnapshot) {
         recommendation = data.val();
 
         $('#myTableBody').append('<tr>'
-        +'<td>'+recommendation.title+'</td>'
+        +'<td>'+toString(recommendation.title)+'</td>'
         +'<td>'+recommendation.presenter+'</td>'
         +'<td>'+recommendation.version+'</td>'
         +'<td>'+recommendation.link+'</td>'+'</tr>')
