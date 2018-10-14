@@ -46,7 +46,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     var data1 = [];
     childSnapshot.forEach(item => {
         // var temp = item.val();
-        console.log(item.item.key);
+        console.log(item.val());
         // data1.push(temp);
         // $('#myTableBody').append('<tr>'
         // +'<td>'+temp+'</td>'+'</tr>')
