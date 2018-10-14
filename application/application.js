@@ -48,7 +48,8 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         var temp = item.val();
         console.log(temp);
         data1.push(temp);
-        
+        $('#myTableBody').append('<tr>'
+        +'<td>'+temp+'</td>'+'</tr>')
         return false;
     });
     //console.log(data1[0]);
@@ -59,11 +60,11 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         
     //     for(var index in data.val()){
 
-    //     $('#myTableBody').append('<tr>'
-    //     +'<td>'+data[index]+'</td>'
-    //     +'<td>'+index.presenter+'</td>'
-    //     +'<td>'+index.version+'</td>'
-    //     +'<td>'+index.link+'</td>'+'</tr>')
+        // $('#myTableBody').append('<tr>'
+        // +'<td>'+data[index]+'</td>'
+        // +'<td>'+index.presenter+'</td>'
+        // +'<td>'+index.version+'</td>'
+        // +'<td>'+index.link+'</td>'+'</tr>')
 
     //     console.log(data.val());
     
