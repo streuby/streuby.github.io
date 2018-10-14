@@ -71,6 +71,8 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
             $("#link").html(item.val());
             
         }
+
+        count++;
         return false;
     });
     //console.log(data1[0]);
