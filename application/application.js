@@ -47,13 +47,13 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         // Get the recommendation data from the most recent snapshot of data
         // added to the recommendations list in Firebase
         
-        recommendation = data.val();
+        data.val().forEach(function(index){
 
         $('#myTableBody').append('<tr>'
-        +'<td>'+recommendation.title+'</td>'
-        +'<td>'+recommendation.presenter+'</td>'
-        +'<td>'+recommendation.version+'</td>'
-        +'<td>'+recommendation.link+'</td>'+'</tr>')
+        +'<td>'+index.title+'</td>'
+        +'<td>'+index.presenter+'</td>'
+        +'<td>'+index.version+'</td>'
+        +'<td>'+index.link+'</td>'+'</tr>')
 
         console.log(data.val());
     
@@ -65,6 +65,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     
         // Make the link actually work and direct to the URL provided
         // $("#link").attr("href", recommendation.link)
+        });
     });
 });
   
