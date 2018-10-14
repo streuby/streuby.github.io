@@ -44,7 +44,7 @@ var submitRecommendation = function () {
 recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
 
-    ChildSnapshot.forEach(item => {
+    childSnapshot.forEach(item => {
         var temp = { title: item.val().title };
         data1.push(temp);
         return false;
