@@ -15,7 +15,7 @@ var config = {
   firebase.initializeApp(config);
   
   // Reference to the recommendations object in your Firebase database
-  var recommendations = firebase.database().ref("recommendations");
+  var recommendations = firebase.database().ref("okayiMessage");
   
   // Save a new recommendation to the database, using the input in the form
   var submitRecommendation = function () {
