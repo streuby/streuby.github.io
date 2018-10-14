@@ -50,12 +50,12 @@ recommendations.limitToLast(2).on('child_added', function(childSnapshot) {
         recommendation = data.val();
 
         $('#myTableBody').append('<tr>'
-        +'<td>'+recommendation.title()+'</td>'
-        +'<td>'+recommendation.presenter()+'</td>'
-        +'<td>'+recommendation.version()+'</td>'
-        +'<td>'+recommendation.link()+'</td>'+'</tr>')
+        +'<td>'+recommendation.title+'</td>'
+        +'<td>'+recommendation.presenter+'</td>'
+        +'<td>'+recommendation.version+'</td>'
+        +'<td>'+recommendation.link+'</td>'+'</tr>')
 
-        console.log(recommendation.title)
+        console.log(data.title)
     
         // Update the HTML to display the recommendation text
         // $("#title").html(recommendation.title)
