@@ -55,7 +55,7 @@ recommendations.limitToLast(2).on('child_added', function(childSnapshot) {
         +'<td>'+recommendation.version+'</td>'
         +'<td>'+recommendation.link+'</td>'+'</tr>')
 
-        console.log(data.val(title));
+        console.log(data.val().title);
     
         // Update the HTML to display the recommendation text
         // $("#title").html(recommendation.title)
