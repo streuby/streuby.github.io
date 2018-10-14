@@ -46,7 +46,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     var data1 = [];
     childSnapshot.forEach(item => {
         var temp = { title: item.val() };
-        console.log(temp[0]['title']);
+        console.log(temp[0]["title"]);
         data1.push(temp);
         
         return false;
