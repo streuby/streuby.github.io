@@ -41,7 +41,7 @@ var submitRecommendation = function () {
 // update the table with its values. This is called every time the child_added
 // event is triggered on the recommendations Firebase reference, which means
 // that this will update EVEN IF you don't refresh the page. Magic.
-recommendations.limitToLast(2).on('child_added', function(childSnapshot) {
+recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
     childSnapshot.forEach(function(data) {
         // Get the recommendation data from the most recent snapshot of data
