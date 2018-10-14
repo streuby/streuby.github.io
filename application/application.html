@@ -44,5 +44,25 @@
          <button type="submit" class="btn btn-default">Submit</button>
        </form>
      </div>
+
+     <h3>Last Talk Proposed</h3>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Presenter</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- This is empty for now, but it will be filled out by an event handler in application.js with the most recent recommendation data from Firebase. -->
+            <td id="title"></td>
+            <td id="presenter"></td>
+            <td><a id="link" target="_blank"></a></td>
+          </tr>
+        </tbody>
+      </table>
    </body>  
 </html>
