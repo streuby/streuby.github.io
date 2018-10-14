@@ -45,11 +45,11 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
     var data1 = [];
     childSnapshot.forEach(item => {
-        var temp = item.val();
-        console.log(temp);
-        data1.push(temp);
-        $('#myTableBody').append('<tr>'
-        +'<td>'+temp+'</td>'+'</tr>')
+        // var temp = item.val();
+        console.log(item);
+        // data1.push(temp);
+        // $('#myTableBody').append('<tr>'
+        // +'<td>'+temp+'</td>'+'</tr>')
         return false;
     });
     //console.log(data1[0]);
