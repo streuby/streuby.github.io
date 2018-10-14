@@ -43,30 +43,38 @@ var submitRecommendation = function () {
 // that this will update EVEN IF you don't refresh the page. Magic.
 recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
-    childSnapshot.forEach(function(data) {
-        // Get the recommendation data from the most recent snapshot of data
-        // added to the recommendations list in Firebase
-        
-        for(var index in data.val()){
 
-        $('#myTableBody').append('<tr>'
-        +'<td>'+data[index]+'</td>'
-        +'<td>'+index.presenter+'</td>'
-        +'<td>'+index.version+'</td>'
-        +'<td>'+index.link+'</td>'+'</tr>')
-
-        console.log(data.val());
-    
-        // Update the HTML to display the recommendation text
-        // $("#title").html(recommendation.title)
-        // $("#presenter").html(recommendation.presenter)
-        // $("#version").html(recommendation.version)
-        // $("#link").html(recommendation.link)
-    
-        // Make the link actually work and direct to the URL provided
-        // $("#link").attr("href", recommendation.link)
-        };
+    ChildSnapshot.forEach(item => {
+        var temp = { title: item.val().title };
+        data1.push(temp);
+        return false;
     });
+    console.log(data1);
+
+    // childSnapshot.forEach(function(data) {
+    //     // Get the recommendation data from the most recent snapshot of data
+    //     // added to the recommendations list in Firebase
+        
+    //     for(var index in data.val()){
+
+    //     $('#myTableBody').append('<tr>'
+    //     +'<td>'+data[index]+'</td>'
+    //     +'<td>'+index.presenter+'</td>'
+    //     +'<td>'+index.version+'</td>'
+    //     +'<td>'+index.link+'</td>'+'</tr>')
+
+    //     console.log(data.val());
+    
+    //     // Update the HTML to display the recommendation text
+    //     // $("#title").html(recommendation.title)
+    //     // $("#presenter").html(recommendation.presenter)
+    //     // $("#version").html(recommendation.version)
+    //     // $("#link").html(recommendation.link)
+    
+    //     // Make the link actually work and direct to the URL provided
+    //     // $("#link").attr("href", recommendation.link)
+    //     };
+    // });
 });
   
 
