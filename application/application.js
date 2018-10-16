@@ -38,12 +38,13 @@ var submitRecommendation = function () {
 };
 
 
-const myTableBody = document.getElementById("MyTableBody");
+
 // Get the single most recent recommendation from the database and
 // update the table with its values. This is called every time the child_added
 // event is triggered on the recommendations Firebase reference, which means
 // that this will update EVEN IF you don't refresh the page. Magic.
 recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
+  var myTableBody = document.getElementById("MyTableBody");
     //loop over childSnapshot
     // childSnapshot.forEach(function(child) {
         
@@ -65,7 +66,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         tr.appendChild(td3);
         tr.appendChild(td4);
 
-        //myTableBody.appendChild(tr);
+        myTableBody.appendChild(tr);
     
     //console.log(childSnapshot.val().version);
     
