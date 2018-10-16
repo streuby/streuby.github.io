@@ -44,7 +44,7 @@ var submitRecommendation = function () {
 // event is triggered on the recommendations Firebase reference, which means
 // that this will update EVEN IF you don't refresh the page. Magic.
 recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
-  var myTableBody = document.getElementById("MyTableBody");
+  var myTableBody = document.getElementById("myTableBody");
     //loop over childSnapshot
     // childSnapshot.forEach(function(child) {
         
