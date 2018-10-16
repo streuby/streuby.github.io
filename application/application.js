@@ -59,6 +59,13 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         td2.appendChild(document.createTextNode(childSnapshot.val().presenter));
         td3.appendChild(document.createTextNode(childSnapshot.val().version));
         td4.appendChild(document.createTextNode(childSnapshot.val().link));
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+
+        $("#myTableBody").appendChild(tr);
     
     //console.log(childSnapshot.val().version);
     
