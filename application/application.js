@@ -49,8 +49,18 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         
         
     // });
+        var tr = document.createElement('TR');
+        var td1 = document.createElement('TD');
+        var td2 = document.createElement('TD');
+        var td3 = document.createElement('TD');
+        var td4 = document.createElement('TD');
+
+        td1.appendChild(document.createTextNode(childSnapshot.val().title));
+        td2.appendChild(document.createTextNode(childSnapshot.val().presenter));
+        td3.appendChild(document.createTextNode(childSnapshot.val().version));
+        td4.appendChild(document.createTextNode(childSnapshot.val().link));
     
-    console.log(childSnapshot.val().version);
+    //console.log(childSnapshot.val().version);
     
 
     // childSnapshot.forEach(function(data) {
