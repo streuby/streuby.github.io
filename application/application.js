@@ -65,7 +65,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         tr.appendChild(td3);
         tr.appendChild(td4);
 
-        $("#myTableBody").appendChild(tr);
+        tableBody.appendChild(tr);
     
     //console.log(childSnapshot.val().version);
     
