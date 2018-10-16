@@ -50,7 +50,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         
     // });
     for (i = 0; i < childSnapshot.numChildren(); i++) {
-    console.log(childSnapshot[i]);
+    console.log(childSnapshot);
     }
 
     // childSnapshot.forEach(function(data) {
