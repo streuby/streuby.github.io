@@ -38,7 +38,7 @@ var submitRecommendation = function () {
 };
 
 
-
+var myTableBody = document.getElementById("MyTableBody");
 // Get the single most recent recommendation from the database and
 // update the table with its values. This is called every time the child_added
 // event is triggered on the recommendations Firebase reference, which means
@@ -65,7 +65,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         tr.appendChild(td3);
         tr.appendChild(td4);
 
-        tableBody.appendChild(tr);
+        myTableBody.appendChild(tr);
     
     //console.log(childSnapshot.val().version);
     
