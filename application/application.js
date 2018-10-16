@@ -50,7 +50,7 @@ recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
         
     // });
     
-    console.log(childSnapshot.val(0));
+    console.log(childSnapshot.val().title);
     
 
     // childSnapshot.forEach(function(data) {
