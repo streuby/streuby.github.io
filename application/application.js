@@ -37,17 +37,7 @@ var submitRecommendation = function () {
   });
 };
 
-function showItems(data, key) {
-    var html = '';
-    html += '<tr>';
-    $.each(data, function(key, value) {
-        html += '<td>' + key + '</td>';
-    });
-    html += '<td class="text-right"><a href="/" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a> <a href="/" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Delete</a></td>';
-    html += '</tr>';
 
-    $('#myTableBody').append(html);
-}
 
 // Get the single most recent recommendation from the database and
 // update the table with its values. This is called every time the child_added
@@ -55,10 +45,12 @@ function showItems(data, key) {
 // that this will update EVEN IF you don't refresh the page. Magic.
 recommendations.limitToLast(5).on('child_added', function(childSnapshot) {
     //loop over childSnapshot
-    childSnapshot.forEach(function(child) {
+    // childSnapshot.forEach(function(child) {
         
-        showItems(child.val(), child.key);
-    });
+        
+    // });
+
+    console.log(childSnapshot.numChildren());
 
 
     // childSnapshot.forEach(function(data) {
