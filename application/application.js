@@ -38,7 +38,7 @@ var submitRecommendation = function () {
 };
 
 
-const myTableBody = document.getElementById(MyTableBody);
+const myTableBody = document.getElementById("MyTableBody");
 // Get the single most recent recommendation from the database and
 // update the table with its values. This is called every time the child_added
 // event is triggered on the recommendations Firebase reference, which means
