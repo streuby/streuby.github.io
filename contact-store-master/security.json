@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "profiles": {
+      "$uid": {
+        
+        ".write": "auth !== null && auth.uid === $uid",
+
+        
+        ".read": "auth !== null && auth.provider === 'password'"
+      }
+    },
+    "conatcts":{
+      "$uid": {
+        
+        ".write": "auth !== null && auth.uid === $uid",
+
+        
+        ".read": "auth !== null && auth.provider === 'password'"
+      }
+    }
+  }
+}
