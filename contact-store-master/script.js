@@ -8,6 +8,7 @@ $(document).ready(function(){
     storageBucket: "contact-store-d520a.appspot.com",
     messagingSenderId: "119343385427"
   };
+  
   firebase.initializeApp(config);
 
   //create firebase references
