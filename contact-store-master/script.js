@@ -113,7 +113,7 @@ $(document).ready(function(){
               zip: $('#zip').val()
             }
           })
-          document.contactForm.reset();
+          //document.contactForm.reset();
       } else {
         alert('Please fill at-lease name or email!');
       }
