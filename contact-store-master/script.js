@@ -1,12 +1,12 @@
 $(document).ready(function(){
   //initialize the firebase app
   var config = {
-    apiKey: "AIzaSyCKNcULQZxFMYioXei32XNWQVoeutz4XDA",
-    authDomain: "contact-book-new.firebaseapp.com",
-    databaseURL: "https://contact-book-new.firebaseio.com",
-    projectId: "contact-book-new",
-    storageBucket: "contact-book-new.appspot.com",
-    messagingSenderId: "473268388365"
+    apiKey: "AIzaSyATeVENhIRqOSYKOApqRZphtn9qLvVUm5g",
+    authDomain: "contact-store-d520a.firebaseapp.com",
+    databaseURL: "https://contact-store-d520a.firebaseio.com",
+    projectId: "contact-store-d520a",
+    storageBucket: "contact-store-d520a.appspot.com",
+    messagingSenderId: "119343385427"
   };
   firebase.initializeApp(config);
 
