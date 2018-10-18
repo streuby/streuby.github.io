@@ -96,7 +96,7 @@ $(document).ready(function(){
   });
 
   //save transaction
-  $('#transactiontForm').on('submit', function( event ) {  
+  $('#transactionForm').on('submit', function( event ) {  
     event.preventDefault();
     if( auth != null ){
       if( $('#marskedpan').val() != '' || $('#bank').val() != ''){
