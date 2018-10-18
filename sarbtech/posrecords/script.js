@@ -108,8 +108,8 @@ $(document).ready(function(){
             type: $('#type').val(),
             phone: $('#phone').val(),
             error: $('#error').val(),
-            email: $('#email').val(),
             status: $('#status').val(),
+            amount: $('#amount').val(),
             fee: $('#fee').val(),
             feetype: $('#feetype').val()
             
