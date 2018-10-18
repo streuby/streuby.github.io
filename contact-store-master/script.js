@@ -103,7 +103,7 @@ $(document).ready(function(){
     event.preventDefault();
     if( auth != null ){
       if( $('#name').val() != '' || $('#email').val() != '' ){
-        contactsRef.child(auth.uid)
+        contactsRef.child('1'/auth.uid)
           .push({
             name: $('#name').val(),
             email: $('#email').val(),
