@@ -121,6 +121,7 @@ $(document).ready(function(){
             $('#messageModalLabel').html(spanText('ERROR: '+error.code, ['danger']))
           });
           //document.TransactionForm.reset();
+          
       } else {
         alert('Please fill at-lease name or email!');
       }

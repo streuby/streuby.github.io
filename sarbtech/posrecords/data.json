@@ -11,18 +11,28 @@
         "name" : "Pankaj Patel"
       }
     },
-    "contacts" : {
+    "transactions" : {
       "1" : {
         "-Jl9cQXgm_6YkdC1xgCK" : {
-          "name" : "Pankaj",
-          "email" : "pankaj@pankaj.pro",
-          "location" : {
-            "city" : "Gurgaon",
-            "state" : "Haryana",
-            "zip" : "122001"
+          "marskedpan" : "516312****548",
+          "bank" : "Union Bank",
+          "customer" :"James Kura",
+          "type" : "Withdrawal",
+          "phone" : "08052730354",
+          "error" : "issuer or switch inopertive",
+          "status" :"failed",
+          "amount" : "5000",
+          "fee" : "200",
+          "feetype" : "Transfer"
           }
         }
-      }
-    }
+      },
+      
+        "rules": {
+          ".read": true,
+          ".write": true
+        }
+      
+    
   
 }
