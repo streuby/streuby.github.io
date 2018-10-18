@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  //initialize the firebase app
+  // Initialize Firebase
   var config = {
     apiKey: "AIzaSyA0gOjc14-1vESXbVqOtCzwcjEqnsNO_hk",
     authDomain: "pos-transaction-records.firebaseapp.com",
