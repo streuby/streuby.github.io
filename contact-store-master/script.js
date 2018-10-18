@@ -111,6 +111,10 @@ $(document).ready(function(){
               zip: $('#zip').val()
             }
           })
+          .catch(function(error){
+            console.log("Error Saving Data:", error);
+            $('#messageModalLabel').html(spanText('ERROR: '+error.code, ['danger']))
+          });
           //document.contactForm.reset();
       } else {
         alert('Please fill at-lease name or email!');
