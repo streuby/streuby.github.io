@@ -97,7 +97,7 @@ $(document).ready(function(){
   });
 
   //save transaction
-  $('#contactForm').on('submit', function( event ) {  
+  $('#TransactiontForm').on('submit', function( event ) {  
     event.preventDefault();
     if( auth != null ){
       if( $('#name').val() != '' || $('#email').val() != '' ){
@@ -115,7 +115,7 @@ $(document).ready(function(){
             console.log("Error Saving Data:", error);
             $('#messageModalLabel').html(spanText('ERROR: '+error.code, ['danger']))
           });
-          //document.contactForm.reset();
+          //document.TransactionForm.reset();
       } else {
         alert('Please fill at-lease name or email!');
       }
@@ -147,14 +147,14 @@ $(document).ready(function(){
       // No user is signed in.
       $('body').removeClass('auth-true').addClass('auth-false');
       auth && contactsRef.child(auth.uid).off('child_added', onChildAdd);
-      $('#contacts').html('');
+      $('#transaction').html('');
       auth = null;
     }
   });
 });
 
 function onChildAdd (snap) {
-  $('#contacts').append(contactHtmlFromObject(snap.key, snap.val()));
+  $('#transactions').append(contactHtmlFromObject(snap.key, snap.val()));
 }
  
 //prepare contact object's HTML
