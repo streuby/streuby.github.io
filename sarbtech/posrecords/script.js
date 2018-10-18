@@ -99,8 +99,7 @@ $(document).ready(function(){
   $('#TransactiontForm').on('submit', function( event ) {  
     event.preventDefault();
     if( auth != null ){
-      if( $('#marskedpan').val() != '' || $('#bank').val() != '' || $('#customername').val() != ''
-      || $('#amount').val() != ''){
+      if( $('#marskedpan').val() != '' || $('#bank').val() != ''){
         transactionRef.child(auth.uid)
           .set({
             pan: $('#marskedpan').val(),
