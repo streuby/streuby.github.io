@@ -92,6 +92,7 @@ $(document).ready(function(){
 
   $('#logout').on('click', function(e) {
     e.preventDefault();
+    $('.user-info').append('<span class="user-name">'+''+'</span>');
     firebase.auth().signOut()
   });
 
