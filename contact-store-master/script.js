@@ -39,7 +39,7 @@ $(document).ready(function(){
         
         firebase.auth()
           .createUserWithEmailAndPassword(data.email, passwords.password)
-          .onAuthStateChanged(function(user) {
+          .then (function(user = firebase.auth().currentUser) {
             return user.updateProfile({
               displayName: data.firstName + ' ' + data.lastName
             })
