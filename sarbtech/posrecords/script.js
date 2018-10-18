@@ -96,7 +96,7 @@ $(document).ready(function(){
     firebase.auth().signOut()
   });
 
-  //save contact
+  //save transaction
   $('#contactForm').on('submit', function( event ) {  
     event.preventDefault();
     if( auth != null ){

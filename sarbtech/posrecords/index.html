@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body class="auth-false">
+
   <div class="container">
     <header class="clearfix">
       <h1>OkayiGlobal: POS Records</h1>
@@ -30,11 +31,12 @@
     <hr/>
     <main class="authenticated">
       <center>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addContactModal">Add Contact</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransaction">Add Transaction</button>
       </center>
       <div id="contacts"></div>
     </main>
   </div>
+
   <div class="row">
     <div class="col-md-6">
       <div><iframe src="//time2hack.com/ads.html" frameborder=0 width="100%" class="embed-responsive-item" align="center"></iframe></div>
@@ -43,6 +45,7 @@
       <div><iframe src="//time2hack.com/ads.html" frameborder=0 width="100%" class="embed-responsive-item" align="center"></iframe></div>
     </div>
   </div>
+
   <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="Register" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -81,6 +84,7 @@
       </div>
     </div>
   </div>
+
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -107,12 +111,13 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="addContactModal" tabindex="-1" role="dialog" aria-labelledby="Add Contact" aria-hidden="true">
+
+  <div class="modal fade" id="addTransactionModal" tabindex="-1" role="dialog" aria-labelledby="Add Transaction" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <form method="POST" id="contactForm" name="contactForm">
           <div class="modal-header">
-            <h4 class="modal-title" id="addContactModalLabel">Add Contact</h4>
+            <h4 class="modal-title" id="addTransactionLabel">Add Transaction</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
@@ -146,6 +151,7 @@
       </div>
     </div>
   </div>
+  
   <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="Message" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
