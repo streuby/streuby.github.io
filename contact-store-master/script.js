@@ -39,11 +39,6 @@ $(document).ready(function(){
         
         firebase.auth()
           .createUserWithEmailAndPassword(data.email, passwords.password)
-          // .then (function(user) {
-          //   return user.updateProfile({
-          //     displayName: data.firstName + ' ' + data.lastName
-          //   })
-          // })
           .then(function(auth){
             //now user is needed to be logged in to save data
             user = auth;
@@ -107,7 +102,7 @@ $(document).ready(function(){
     if( auth != null ){
       if( $('#name').val() != '' || $('#email').val() != '' ){
         contactsRef.child(auth.uid)
-          .push({
+          .set({
             name: $('#name').val(),
             email: $('#email').val(),
             location: {
