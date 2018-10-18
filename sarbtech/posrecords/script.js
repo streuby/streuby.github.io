@@ -161,16 +161,14 @@ function onChildAdd (snap) {
   $('#transactions').append(contactHtmlFromObject(snap.key, snap.val()));
 }
  
-//prepare contact object's HTML
-function contactHtmlFromObject(key, contact){
-  return '<div class="card contact" style="width: 18rem;" id="'+key+'">'
+//prepare transaction object's HTML
+function contactHtmlFromObject(key, transaction){
+  return '<div class="card transaction" style="width: 18rem;" id="'+key+'">'
     + '<div class="card-body">'
-      + '<h5 class="card-title">'+contact.name+'</h5>'
-      + '<h6 class="card-subtitle mb-2 text-muted">'+contact.email+'</h6>'
-      + '<p class="card-text" title="' + contact.location.zip+'">'
-        + contact.location.city + ', '
-        + contact.location.state
-      + '</p>'
+      + '<h5 class="card-title">'+transaction.pan+'</h5>'
+      + '<h6 class="card-subtitle mb-2 text-muted">'+transaction.customer+'</h6>'
+      + '<h6 class="card-subtitle mb-2 text-muted">'+transaction.bank+'</h6>'
+      + '<h6 class="card-subtitle mb-2 text-muted">'+transaction.amount+'</h6>'
       // + '<a href="#" class="card-link">Card link</a>'
       // + '<a href="#" class="card-link">Another link</a>'
     + '</div>'
