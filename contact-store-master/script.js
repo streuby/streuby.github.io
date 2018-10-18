@@ -43,7 +43,7 @@ $(document).ready(function(){
             return user.updateProfile({
               displayName: data.firstName + ' ' + data.lastName
             })
-          })
+          
           .then(function(user){
             //now user is needed to be logged in to save data
             auth = user;
@@ -59,7 +59,8 @@ $(document).ready(function(){
           .catch(function(error){
             console.log("Error creating user:", error);
             $('#messageModalLabel').html(spanText('ERROR: '+error.code, ['danger']))
-          });
+          })
+        });
       } else {
         //password and confirm password didn't match
         $('#messageModalLabel').html(spanText("ERROR: Passwords didn't match", ['danger']))
