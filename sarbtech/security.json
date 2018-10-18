@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "profiles": {
+      "$uid": {
+        
+        ".write": "!data.exists() && auth.uid === $uid",
+
+        
+        ".read": "!data.exists() && auth.provider === 'password'"
+      }
+    },
+    "conatcts":{
+      "$uid": {
+        
+        ".write": "!data.exists() && auth.uid === $uid",
+
+        
+        ".read": "!data.exists() && auth.provider === 'password'"
+      }
+    }
+  }
+}

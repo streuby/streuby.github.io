@@ -1,0 +1,28 @@
+{
+  
+    "users" : {
+      "1" : {
+        "email" : "pankaj@time2hack.com",
+        "location" : {
+          "city" : "Gurgaon",
+          "state" : "Haryana",
+          "zip" : "122001"
+        },
+        "name" : "Pankaj Patel"
+      }
+    },
+    "contacts" : {
+      "1" : {
+        "-Jl9cQXgm_6YkdC1xgCK" : {
+          "name" : "Pankaj",
+          "email" : "pankaj@pankaj.pro",
+          "location" : {
+            "city" : "Gurgaon",
+            "state" : "Haryana",
+            "zip" : "122001"
+          }
+        }
+      }
+    }
+  
+}
