@@ -1,12 +1,12 @@
 $(document).ready(function(){
   //initialize the firebase app
   var config = {
-    apiKey: "AIzaSyATeVENhIRqOSYKOApqRZphtn9qLvVUm5g",
-    authDomain: "contact-store-d520a.firebaseapp.com",
-    databaseURL: "https://contact-store-d520a.firebaseio.com",
-    projectId: "contact-store-d520a",
-    storageBucket: "contact-store-d520a.appspot.com",
-    messagingSenderId: "119343385427"
+    apiKey: "AIzaSyA0gOjc14-1vESXbVqOtCzwcjEqnsNO_hk",
+    authDomain: "pos-transaction-records.firebaseapp.com",
+    databaseURL: "https://pos-transaction-records.firebaseio.com",
+    projectId: "pos-transaction-records",
+    storageBucket: "pos-transaction-records.appspot.com",
+    messagingSenderId: "910784172802"
   };
   
   firebase.initializeApp(config);
