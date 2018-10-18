@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  // Initialize Firebase
   var config = {
     apiKey: "AIzaSyA0gOjc14-1vESXbVqOtCzwcjEqnsNO_hk",
     authDomain: "pos-transaction-records.firebaseapp.com",
@@ -101,7 +100,7 @@ $(document).ready(function(){
     event.preventDefault();
     if( auth != null ){
       if( $('#marskedpan').val() != '' || $('#bank').val() != '' || $('#customername').val() != ''
-      || $('#amount').val() != '' ){
+      || $('#amount').val() != ''){
         transactionRef.child(auth.uid)
           .set({
             pan: $('#marskedpan').val(),
