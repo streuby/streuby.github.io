@@ -100,10 +100,10 @@ $(document).ready(function(){
   $('#TransactiontForm').on('submit', function( event ) {  
     event.preventDefault();
     if( auth != null ){
-      if( $('#name').val() != '' || $('#email').val() != '' ){
+      if( $('#marskedpan').val() != '' || $('#email').val() != '' ){
         contactsRef.child(auth.uid)
           .set({
-            name: $('#name').val(),
+            name: $('#marskedpan').val(),
             email: $('#email').val(),
             location: {
               city: $('#city').val(),

@@ -114,40 +114,93 @@
 
   <div class="modal fade" id="addTransactionModal" tabindex="-1" role="dialog" aria-labelledby="Add Transaction" aria-hidden="true">
     <div class="modal-dialog">
+
       <div class="modal-content">
-        <form method="POST" id="contactForm" name="contactForm">
+
+        <form method="POST" id="transactionForm" name="transactionForm">
+
           <div class="modal-header">
             <h4 class="modal-title" id="addTransactionLabel">Add Transaction</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
+
           <div class="modal-body">
+
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" required placeholder="Enter name">
+              <label for="marskedpan">Marsked PAN</label>
+              <input type="text" class="form-control" id="marskedpan" required placeholder="Enter Marsked PAN">
             </div>
+
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" required placeholder="Enter Email">
+              <label for="bank">Bank</label>
+              <input type="text" class="form-control" id="bank" required placeholder="Enter Customer Bank">
             </div>
+
             <h3>Location</h3>
+
             <div class="form-group">
-              <label for="city">City</label>
-              <input type="text" class="form-control" id="city" placeholder="Enter City">
+              <label for="customername">Customer Name</label>
+              <input type="text" class="form-control" id="customername" placeholder="Enter Customer Name">
             </div>
+
             <div class="form-group">
-              <label for="email">State</label>
-              <input type="text" class="form-control" id="state" placeholder="Enter State">
+              <label for="Type">Type</label>
+              <select type="text" class="form-control" id="state" placeholder="Select Transaction Type">
+                  <option value="" disabled selected>Select Transaction Type</option>
+                  <option value="Withdrawal">Withdrawal</option>
+                  <option value="Transver">Transfer</option>
+                  <option value="Deposit">Deposit</option>
+                  <option value="TV">TV Recharge</option> 
+              </select>
             </div>
+
             <div class="form-group">
-              <label for="zip">Zip</label>
-              <input type="text" class="form-control" id="zip" placeholder="Enter Zip Code">
+              <label for="phone">Customer Phone#</label>
+              <input type="text" class="form-control" id="phone" placeholder="Enter Customer Phone Number">
             </div>
+
+            <div class="form-group">
+                <label for="error">Error Massage</label>
+                <input type="text" class="form-control" id="error" placeholder="Enter Error if any ">
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select type="text" class="form-control" id="status" placeholder="Was Transaction Failee or Successful">
+                    <option value="" disabled selected>Select Transaction Status</option>
+                    <option value="Successful">Successful</option>
+                    <option value="Failed">Failed</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                  <label for="amount">Amount</label>
+                  <input type="number" class="form-control" id="amount" placeholder="Enter Amount">
+            </div>
+
+            <div class="form-group">
+                  <label for="fee">Fee Charged</label>
+                  <input type="number" class="form-control" id="fee" placeholder="Enter Fee Charged ">
+            </div>
+
+            <div class="form-group">
+                <label for="feetype">Fee Type</label>
+                <select type="text" class="form-control" id="status" placeholder="Select fee type">
+                    <option value="" disabled selected>Select Fee Type</option>
+                    <option value="Successful">Cash</option>
+                    <option value="Failed">Transfer</option>
+                </select>
+            </div>              
+
           </div>
+
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary addValue">Submit</button>
           </div>
+
         </form>
+
       </div>
     </div>
   </div>
