@@ -14,7 +14,7 @@ $(document).ready(function(){
   //create firebase references
   var Auth = firebase.auth(); 
   var dbRef = firebase.database();
-  var contactsRef = dbRef.ref('contacts')
+  var transactionRef = dbRef.ref('transactions')
   var usersRef = dbRef.ref('users')
   var auth = null;
 
@@ -100,16 +100,21 @@ $(document).ready(function(){
   $('#TransactiontForm').on('submit', function( event ) {  
     event.preventDefault();
     if( auth != null ){
-      if( $('#marskedpan').val() != '' || $('#email').val() != '' ){
-        contactsRef.child(auth.uid)
+      if( $('#marskedpan').val() != '' || $('#bank').val() != '' || $('#customername').val() != ''
+      || $('#amount').val() != '' ){
+        transactionRef.child(auth.uid)
           .set({
-            name: $('#marskedpan').val(),
+            pan: $('#marskedpan').val(),
+            bank: $('#bank').val(),
+            customer: $('#customername').val(),
+            type: $('#type').val(),
+            phone: $('#phone').val(),
+            error: $('#error').val(),
             email: $('#email').val(),
-            location: {
-              city: $('#city').val(),
-              state: $('#state').val(),
-              zip: $('#zip').val()
-            }
+            status: $('#status').val(),
+            fee: $('#fee').val(),
+            feetype: $('#feetype').val()
+            
           })
           .catch(function(error){
             console.log("Error Saving Data:", error);
@@ -142,11 +147,11 @@ $(document).ready(function(){
           $('.user-info').append('<span class="user-name">'+info.firstName+'</span>');
         }
       });
-      contactsRef.child(user.uid).on('child_added', onChildAdd);
+      transactionRef.child(user.uid).on('child_added', onChildAdd);
     } else {
       // No user is signed in.
       $('body').removeClass('auth-true').addClass('auth-false');
-      auth && contactsRef.child(auth.uid).off('child_added', onChildAdd);
+      auth && transactionRef.child(auth.uid).off('child_added', onChildAdd);
       $('#transaction').html('');
       auth = null;
     }
